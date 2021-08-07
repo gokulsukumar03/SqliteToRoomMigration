@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
     private fun getRoomData() {
         if (isDataNotExist()) {
             Toast.makeText(this, "Execute Sqlite first...", Toast.LENGTH_SHORT).show()
-            //return
+            return
         }
         Executors.newSingleThreadExecutor().execute(Runnable {
             setDbMigrated()
